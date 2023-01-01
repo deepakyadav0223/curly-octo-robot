@@ -277,6 +277,7 @@ router.post("/check" ,auths ,async(req,res)=>{
 router.get("/StudentsData" , async(req,res)=>{
 
     let Students = await studentSchema.find({});
+    // console.log(Students);
     let data = [];
 
     for(let i = 0 ; i < Students.length ; i++){
@@ -291,6 +292,7 @@ router.get("/StudentsData" , async(req,res)=>{
            descriptor2 : Students[i].descriptor2,
            descriptor3 : Students[i].descriptor3
        }
+       console.log(obj);
        data.push(obj)
     }
 

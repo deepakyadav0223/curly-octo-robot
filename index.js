@@ -5,7 +5,7 @@ const cors = require("cors");
 require("./Database/conn");
 const routes = require("./routes")
 
-const port = process.env.PORT;
+const port = process.env.PORT ||  80;
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
